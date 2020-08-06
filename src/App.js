@@ -4,6 +4,7 @@ import {
   Route,
   Switch
 } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import HomeContainer from './containers/HomeContainer';
 import './App.css';

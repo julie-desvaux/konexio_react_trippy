@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Api from '../utils/Api';
 import Home from '../components/core/Home';
+import Gallery from '../components/city/Gallery';
 
 class HomeContainer extends Component {
     constructor(props) {
@@ -26,7 +27,7 @@ class HomeContainer extends Component {
         console.log('HomeContainer#render cities', cities);
         return(
             <>
-                <Home cities={cities}/>
+                <Gallery cities={cities}/>
             </>
         );
     }

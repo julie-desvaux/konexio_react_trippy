@@ -9,6 +9,8 @@ class Home extends Component {
 
     render() {
         const { cities } = this.props;
+        const isLargeTrue   = true;
+        const isLargeFalse  = false;
         if (cities.length > 0) {
             return(
                 <div>
@@ -16,6 +18,13 @@ class Home extends Component {
                         name={cities[0].name}
                         slug={cities[0].slug}
                         source={cities[0].source}
+                        isLarge={isLargeTrue}
+                    />
+                    <Card 
+                        name={cities[1].name}
+                        slug={cities[1].slug}
+                        source={cities[1].source}
+                        isLarge={isLargeFalse}
                     />
                 </div>
             );
