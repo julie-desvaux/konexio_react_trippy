@@ -23,8 +23,8 @@ class Gallery extends Component {
         const isLargeFalse  = false;
         console.log('cities', cities[0])
         return(
-            <Container className="row">
-                <div className="col-md-12">
+            <Container className="row mt-5">
+                <div className="col-md-12 mt-5">
                     <h1>Explorez le monde</h1>
                     <div>
                         {cities[0] === undefined ? '' :(
