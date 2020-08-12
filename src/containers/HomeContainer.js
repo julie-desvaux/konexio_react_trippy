@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Api from '../utils/Api';
-import Home from '../components/core/Home';
+// import Home from '../components/core/Home';
 import Gallery from '../components/city/Gallery';
 
 class HomeContainer extends Component {

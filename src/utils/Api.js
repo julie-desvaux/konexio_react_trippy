@@ -1,12 +1,9 @@
 import Config from "../Config";
 
 class Api {
-    constructor() {
-
-    }
 
     async getHome() {
-        const url = Config.host + '/api/home';
+        const url = `${Config.HOST}/api/home`;
         return fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -18,6 +15,18 @@ class Api {
                 return data.cities;
             }
         );
+    }
+
+    async getCityHotels(city) {
+        const url = `${Config.HOST}/api/hotels/city/${city}`;
+        return fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                if (data.success === false) {
+                    return [];
+                }
+                return data;
+            })
     }
 }
 
