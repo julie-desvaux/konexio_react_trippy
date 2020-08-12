@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-import Config from '../../Config';
 import Global from '../../Global';
 
-const Nav = styled.div`
+const Nav = styled.nav`
     background-color: ${Global.color.primary};
     
 `;
@@ -23,7 +22,13 @@ class Navigation extends Component {
     }
 
     componentDidMount() {
-        // window.onscroll = this.onScroll.bind(this);
+        window.onscroll = this.onScroll.bind(this);
+    }
+
+    onScroll() {
+        const isScrolled = !this.state.isScrolled;
+        console.log('isScrolled', isScrolled);
+        this.setState({ isScrolled });
     }
 
     render() {
@@ -53,7 +58,7 @@ class Navigation extends Component {
                                 </NavLink>
                             </li>
                         </ul>
-                        <span class="navbar-text">
+                        <span className="navbar-text">
                             <ul className="navbar-nav mr-auto">
                                 <li className="nav-item">
                                     <NavLink exact className="nav-link" activeClassName="active" to="/login">
